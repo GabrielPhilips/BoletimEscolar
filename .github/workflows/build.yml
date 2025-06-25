@@ -7,4 +7,11 @@ jobs:
   DigaOla:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Ola"
+      - uses: actions/checkout@v4
+      - uses: actions/setup-setup-java@v2
+        with:
+          java-version: '21'
+          distribution: 'temurin'
+          cache: 'gradle'
+      - run: ./gradle build --no-daemon
+      
