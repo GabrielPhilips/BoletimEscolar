@@ -1,6 +1,10 @@
 name: DigaOla
-description: "Action para printar um Olá"
+description: "A simple action that prints 'Olá' to the console."
 
 runs:
-  - name: Diga Ola
-    run: echo "Ola"
+  using: "composite"
+  steps:
+    - name: DigaOla
+      run: echo "Olá"
+      shell: bash
+
