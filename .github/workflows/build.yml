@@ -13,7 +13,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       - name: Diga Ola
-        uses: ./.github/actions/DigaOla-action
+        uses: ./.github/actions/diga-ola-action
 
   Build:
     runs-on: ubuntu-latest
