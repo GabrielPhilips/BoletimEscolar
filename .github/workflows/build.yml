@@ -22,11 +22,8 @@ jobs:
         with:
           java-version: '21'
           distribution: 'temurin'
-          # Removemos o cache para evitar erros 503 temporários
-          # cache: 'gradle'
+         
+      - name: Setup Gradle
+        uses: gradle/actions/setup-gradle@v4
  
-      - name: Give execute permission to gradlew
-        run: chmod +x gradlew
- 
-      - name: Build with Gradle
-        run: ./gradlew build --no-daemon
+      - run: ./gradlew build
